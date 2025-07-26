@@ -1,0 +1,454 @@
+:root {
+    --main-borderRadius: 15px;
+    --primaryColor: rgb(252, 247, 247);
+    --secondaryColor: rgb(45, 25, 25);
+    --mainPadding: 20px;
+    --buttonPadding: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--primaryColor);
+    
+}
+#mainHeader1{
+    box-sizing:border-box;
+}
+.mainHeader {
+    background-image: url('images/heroImage.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--secondaryColor);
+    padding: var(--mainPadding);
+}
+#firstHeading {
+    font-size: 1rem;
+    font-family: 'oswald', serif;
+    color: var(--primaryColor);
+}
+.headTopic {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.dot {
+    background-color: var(--primaryColor);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.heroText {
+    text-align: center;
+    color: var(--primaryColor);
+    font-family: 'oswald', sans-serif;
+}
+.heroText > h1 {
+    font-family: 'oswald', 'Tangerine', serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 3rem;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+#Bio {
+    margin-top: 20px;
+}
+.contactMe {
+    background-color: var(--secondaryColor);
+    padding: var(--buttonPadding);
+    border-radius: 100px;
+    margin-top: 30px;
+    border: none;
+    color: var(--primaryColor);
+    font-family: 'oswald', serif;
+    font-size: 1rem;
+    display: flex;
+    justify-self: center;
+    position: relative;
+}
+.contactButton {
+    text-decoration: none;
+}
+#arrowForward {
+    margin-left: 10px;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    border-radius: 50%;
+    animation: materialIcon 0.8s linear 0 forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes materialIcon {
+    from {
+        transform: translateX(-5px);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-family: 'oswald', serif;
+    font-size: 1rem;
+}
+.bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    margin: 4px auto;
+    background-color: var(--primaryColor);
+}
+.headNav {
+    display: flex;
+    justify-content: space-between;
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger:active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:active .bar:nth-child(1) {
+    transform: translatey(8px) rotate(45deg);
+}
+.hamburger:active .bar:nth-child(3) {
+    transform: translateY(-4px) rotate(-45deg);
+}
+.navLinks {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--secondaryColor);
+    padding: var(--mainPadding);
+    width: 50%;
+    height: 100vh;
+    text-align: right;
+    box-sizing: border-box;
+    line-height: 2.5rem;
+    transition: right 0.5s ease;
+    right: -100%;
+    top: 0;
+    padding-top: 70px;
+}
+.navLinks.active {
+    right: 0;
+    z-index: 1000;
+}
+.aboutSection {
+    font-family: 'oswald', serif;
+    padding: var(--mainPadding);
+    text-align: center;
+}
+.aboutSection h2 {
+    margin-bottom: 20px;
+}
+.aboutContainer {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    padding: 2rem;
+    border-radius: var(--main-borderRadius);
+    line-height: 2rem;
+    background-image: url('images/heroImage1.png');
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+#serviceSection {
+    font-family: 'oswald', serif;
+    padding: var(--mainPadding);
+}  
+#serviceSection h2 {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: -20px;
+}
+.card {
+    padding: var(--mainPadding);
+    background-color: var(--secondaryColor);
+    border-radius: var(--main-borderRadius);
+    filter: blur(3px);
+    scroll-snap-align: center;
+    text-align: center;
+    flex: 0 0 auto;
+    color: var(--primaryColor);
+    transition: filter 0.3s ease;
+    height: auto;
+    min-width: 250px
+}
+.card.active {
+    filter: blur(0);
+    scale: 1.05;
+}
+.scroll-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+}
+.scrollContainer {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: 400px;
+    padding-top: 30px;
+}
+.scroll-btn {
+    padding: 8px 10px;
+    font-size: 1rem;
+    color: var(--primaryColor);
+    background-color: rgb(45, 25, 25,0.3);
+    border-radius: 100%;
+    position: absolute;
+    border: none;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.scroll-btn.left {
+  left: 0.5rem;
+}
+
+.scroll-btn.right {
+  right: 0.5rem;
+}
+
+#webdev {
+    background: url('images/mobilewebDev.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    height: 300px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#webdev h3 + p {
+    color: var(--primaryColor);
+}
+#webManagement {
+    background: url('images/mobilewebManagement.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    height: 300px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#webmanagement h3 + p {
+    color: var(--primaryColor);
+}
+
+#Graphics {
+    background: url('images/mobilegraphicDesign.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    height: 300px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#Graphics h3 + p {
+    color: var(--primaryColor);
+}
+#digital {
+    background: url('images/mobiledigitalServices.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    height: 300px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#digital h3 + p {
+    color: var(--primaryColor);
+}
+/* Scrolling skills */
+#marquee {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+#marquee image {
+    margin-left: 50%;
+}
+/* Contact section */
+#contact {
+    font-family: 'oswald', serif;
+    text-align: center;
+    padding: var(--mainPadding);
+}
+/* Floating placeholder */
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 2rem;
+    text-align: center;
+}
+input, #textArea {
+    padding: 0.5rem;
+    border: 1px solid var(--secondaryColor);
+    font-size: 1rem;
+    background: transparent;
+    width: 300px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+#nameLabelBox {
+    margin-top: -30px;
+    margin-left: -150px;
+    transition: transform 0.3s ease;
+}
+#emailLabelBox {
+    margin-top: -30px;
+    margin-left: -150px;
+    transition: transform 0.3s ease;
+}
+#textLabelBox {
+    margin-top: -45px;
+    margin-left: -165px;
+    transition: transform 0.3s ease;
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+#nameLabelBox.active {
+    transform: translateY(-10px);
+    background-color: var(--primaryColor);
+    z-index: 1500;
+    display: inline-block;
+    padding: 5px;
+    border: none;
+}
+#emailLabelBox.active {
+    transform: translateY(-10px);
+    background-color: var(--primaryColor);
+    z-index: 1500;
+    display: inline-block;
+    padding: 5px;
+    border: none;
+}
+#textLabelBox.active {
+    transform: translateY(-10px);
+    background-color: var(--primaryColor);
+    z-index: 1500;
+    display: inline-block;
+    padding: 5px;
+    border: none;
+}
+.submitButton {
+    padding: var(--buttonPadding);
+    border-radius: 100px;
+    border: none;
+    font-family: 'oswald', serif;
+    margin-top: 5rem;
+    width: 100px;
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+footer {
+    font-family: 'oswald', serif;
+    font-size: 0.8rem;
+    background-color: var(--secondaryColor);
+    color: grey;
+    padding: var(--mainPadding);
+    text-align: center;
+    margin-top: 20px;
+    line-height: 2rem;
+}
+footer #icons {
+    color: grey;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--secondaryColor);
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.loader {
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    height: 100px;
+    border: 10px dashed var(--primaryColor);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.innerLoader {
+    width: 50px;
+    height: 50px;
+    border: 5px dashed var(--primaryColor);
+    border-radius: 100%;
+    background-color: var(--secondaryColor);
+    align-self: center;
+    animation: innerSpin 1s linear infinite;
+}
+@keyframes innerSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

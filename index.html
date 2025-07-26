@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ifeanyi's online Portfolio">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="robots" content="index, follow">
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <meta name="color-scheme" content="light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Anton|Oswald|Poppins">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header id="mainHeader1">
+                    <div id="preloader">
+            <div class="loader">
+                <div class="innerLoader"></div>
+            </div>
+        </div>
+            <div class="mainHeader">
+                <div class="headNav">
+                    <div class="headTopic">
+                        <div class="dot"></div><h1 id="firstHeading"> IFEANYI </h1>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                    <nav id="navLinks" class="navLinks">
+                        <a href="#about" class="nav-link">About</a>
+                        <hr>
+                        <a href="#serviceSection" class="nav-link">Services</a>
+                        <hr>
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <hr>
+                    </nav>
+                <div class="heroText">
+                    <p>Hi, I'm Ifeanyi</p>
+                    <h1 id="hero-text"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                        A Website<br>
+                        & Web App<br>
+                        Developer.
+                    </h1>
+                    <hr>
+                    <p id="Bio" data-aos="zoom-in" data-aos-duration="2000">
+                        Transforming ideas into stunning<br> 
+                        websites - Websites that captivates,<br>
+                        engages and delivers results.
+                    </p>
+                    <a href="#contact" class="contactButton">
+                    <button class="contactMe" data-aos="zoom-in" data-aos-duration="2000"> CONTACT ME 
+                        <span class="material-icons" id="arrowForward">arrow_forward</span>
+                    </button></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="serviceSection">
+                <h2> Services I Offer </h2>
+                <div class="scroll-wrapper" id="scrollWrapper">
+                    <button id="scrollLeft" class="scroll-btn left"> ◀ </button>
+                    <div class="scrollContainer" id="scrollContainer">
+                        <div class="card" id="webdev">
+                            <span class="material-icons">laptop </span> 
+                            <h3>Web Development </h3>
+                        <p> Modern, responsive websites <br>built for performance, user experience, <br>and seamless functionality.</p></div>
+                        <div class="card" id="webManagement"> 
+                            <span class="material-icons"> settings</span>  
+                        <h3>Full Web management</h3>
+                    <p> Complete website care <br> updates, security, backups, <br> speed optimization, and content management</p></div>
+                        <div class="card" id="Graphics"> 
+                            <span class="material-icons"> palette </span>
+                            <h3> Graphics Design </h3>
+                            <p>Creative, brand-focused visuals<br> tailored to make your business <br> stand out online and offline.</p>
+                        </div>
+                        <div class="card" id="digital"> 
+                            <span class="material-icons">build_circle  </span>
+                            <h3>Digital Services</h3>
+                            <p>Reliable support for typing jobs, <br>online tasks, and tech-related issues <br>fast, precise, and professional.</p>
+                             </div>
+                    </div>
+                    <button id="scrollRight" class="scroll-btn right"> ▶ </button>
+                </div>
+            </section>
+            <section class="aboutSection" id="about">
+                <h2> About Me </h2>
+                <div class="aboutContainer" id="aboutContainer">
+                    <p data-aos="fade-up" data-aos-duration="2000">
+                        I'm a Front-End Developer passionate about building clean, responsive, and user friendly websites that bring ideas to life.<br><br><br></p>
+                       <p data-aos="fade-up" data-aos-duration="2000"> I specialise in HTML, CSS and JavaScript, with a growing knowledge in back-end technologies, allowing me to build web solutions that are both attractive and functional.<br><br><br></p>
+                        <p data-aos="fade-up" data-aos-duration="2000">I love solving problems and creating desgins that leave lasting impressions on users. My approach combines attention to detail, a clear understanding of user experience, and strong technical skills to work that stands out.</p>
+                </div>
+            </section>
+            <section id="contact" class="contactPage">
+                <h2> Contact Me </h2>
+                <p> Always feel free to contact me either for work, share your thoughts or to connect with me.<br>
+                I will reply as soon as i can. </p>
+
+                <form action="#" role="form" method="post" class="mainForm">
+                    <div class="inputArea">
+                        <input type="text" id="name" minlength="3" required><br>
+                        <div id="nameLabelBox">
+                        <label for="name" id="nameLabel">Enter your name</label>
+                        </div>
+                    </div>
+                    <div class="emailArea">
+                        <input type="email" id="email" required><br>
+                        <div id="emailLabelBox">
+                        <label for="name" id="emailLabel">Enter your email</label>
+                        </div>
+                    </div>
+                    <div class="textarea">
+                        <textarea id="textArea"></textarea><br>
+                        <div id="textLabelBox">
+                        <label for="textArea" id="textLabel">Your message</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submitButton"> Send Message</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+        <p>Contact and connect with me through the following channels</p>
+            <div class="footer-icons">
+                <a href="mailto:ifecodigitalservices@gmail.com" target="_blank"><i class="fas fa-envelope" id="icons"></i></a>
+                <a href="https://github.com/ifeanyijosephh" target="_blank"> <i class="fab fa-github" id="icons"></i></a>
+                <a href="https://wa.me/2347043936131" target="_blank"><i class="fab fa-whatsapp" id="icons"></i></a>
+                <a href="https://x.com/ifeanyiijosephh" target="_blank"> <i class="fab fa-twitter" id="icons"></i> </a>
+            </div>
+        <p>&copy; Ifeco digital services, 2025.<br> All rights reserved.</p>
+        </footer>
+        <script>
+            AOS.init();
+        </script>
+        <script src="script.js"></script>
+        <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
+    preloader.style.transition = "opacity 0.5s ease";
+  });
+</script>
+
+    </body>
+</html>
