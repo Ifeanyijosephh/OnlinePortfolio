@@ -16,7 +16,8 @@
     </head>
     <body>
         <header id="mainHeader1">
-                    <div id="preloader">
+            
+         <div id="preloader">
             <div class="loader">
                 <div class="innerLoader"></div>
             </div>
@@ -24,7 +25,18 @@
             <div class="mainHeader">
                 <div class="headNav">
                     <div class="headTopic">
-                        <div class="dot"></div><h1 id="firstHeading"> IFEANYI </h1>
+                        <div class="dotHeader">
+                            <div class="dot"></div>
+                            <h1 id="firstHeading"> IFEANYI </h1>
+                        </div>
+                        <nav id="navLinks" class="navLinks">
+                            <a href="#about" class="nav-link">About</a>
+                            <hr id="hrLine">
+                            <a href="#serviceSection" class="nav-link">Services</a>
+                            <hr id="hrLine">
+                            <a href="#contact" class="nav-link contact">Contact</a>
+                            <hr id="hrLine">
+                        </nav>
                     </div>
                     <div class="hamburger" id="hamburger">
                         <span class="bar"></span>
@@ -32,14 +44,6 @@
                         <span class="bar"></span>
                     </div>
                 </div>
-                    <nav id="navLinks" class="navLinks">
-                        <a href="#about" class="nav-link">About</a>
-                        <hr>
-                        <a href="#serviceSection" class="nav-link">Services</a>
-                        <hr>
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <hr>
-                    </nav>
                 <div class="heroText">
                     <p>Hi, I'm Ifeanyi</p>
                     <h1 id="hero-text"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
@@ -57,6 +61,14 @@
                     <button class="contactMe" data-aos="zoom-in" data-aos-duration="2000"> CONTACT ME 
                         <span class="material-icons" id="arrowForward">arrow_forward</span>
                     </button></a>
+                </div>
+                <div class="circles">
+                    <div class="circles-Five"></div>
+                    <div class="circles-One"></div>
+                    <div class="circles-OneFour"></div>
+                    <div class="circles-Two"></div>
+                    <div class="circles-Three"></div>
+                    <div class="circles-Four"></div>
                 </div>
             </div>
         </header>
@@ -88,15 +100,17 @@
                     <button id="scrollRight" class="scroll-btn right"> ▶ </button>
                 </div>
             </section>
+            <section class="aboutContact">
             <section class="aboutSection" id="about">
                 <h2> About Me </h2>
                 <div class="aboutContainer" id="aboutContainer">
                     <p data-aos="fade-up" data-aos-duration="2000">
-                        I'm a Front-End Developer passionate about building clean, responsive, and user friendly websites that bring ideas to life.<br><br><br></p>
-                       <p data-aos="fade-up" data-aos-duration="2000"> I specialise in HTML, CSS and JavaScript, with a growing knowledge in back-end technologies, allowing me to build web solutions that are both attractive and functional.<br><br><br></p>
+                        I'm a Front-End Developer passionate about building clean, responsive, and user friendly websites that bring ideas to life.<br><br></p>
+                       <p data-aos="fade-up" data-aos-duration="2000"> I specialise in HTML, CSS and JavaScript, with a growing knowledge in back-end technologies, allowing me to build web solutions that are both attractive and functional.<br><br></p>
                         <p data-aos="fade-up" data-aos-duration="2000">I love solving problems and creating desgins that leave lasting impressions on users. My approach combines attention to detail, a clear understanding of user experience, and strong technical skills to work that stands out.</p>
                 </div>
             </section>
+            <div class="verticalLIne"></div>
             <section id="contact" class="contactPage">
                 <h2> Contact Me </h2>
                 <p> Always feel free to contact me either for work, share your thoughts or to connect with me.<br>
@@ -123,6 +137,7 @@
                     </div>
                     <button type="submit" class="submitButton"> Send Message</button>
                 </form>
+            </section>
             </section>
         </main>
         <footer>

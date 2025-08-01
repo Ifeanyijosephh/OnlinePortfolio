@@ -52,7 +52,6 @@ scrollContainer.addEventListener('scroll', () => {
   updateActiveCard();
 });
 
-// Add active card highlighting logic (optional)
 function updateActiveCard() {
   const center = scrollContainer.scrollLeft + scrollContainer.offsetWidth / 2;
   const allCards = scrollContainer.querySelectorAll('.card');
@@ -62,7 +61,6 @@ function updateActiveCard() {
   });
 }
 
-// Optional: Button scroll
 document.getElementById('scrollLeft').onclick = () => {
   scrollContainer.scrollBy({ left: -singleCardWidth, behavior: 'smooth' });
 };
@@ -70,8 +68,7 @@ document.getElementById('scrollRight').onclick = () => {
   scrollContainer.scrollBy({ left: singleCardWidth, behavior: 'smooth' });
 };
 
- 
-// floating inputs 
+
 const userName = document.getElementById("name");
 const userEmail = document.getElementById("email");
 const userMessage = document.getElementById("textArea");
